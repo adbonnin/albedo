@@ -1,0 +1,6 @@
+= albedo
+
+[source,bash]
+----
+mn create-app albedo --lang java --features application,http-client,http-server,logback,micrometer,security-jwt,spock,swagger-java
+----
