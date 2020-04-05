@@ -5,12 +5,14 @@ plugins {
     id "groovy"
 }
 
-
-
 version "0.1"
 group "albedo"
 
+sourceCompatibility = 1.9
+targetCompatibility = 1.9
+
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url "https://jcenter.bintray.com" }
 }
@@ -21,6 +23,10 @@ configurations {
 }
 
 dependencies {
+    compile "org.mindrot:jbcrypt:$jbcryptVersion"
+    compile "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
+    compile "fr.adbonnin.cz2128:cz2128:$cz2128Version"
+
     annotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut:micronaut-validation"

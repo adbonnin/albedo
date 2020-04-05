@@ -1,5 +1,7 @@
 ---
 micronaut:
+  server:
+    port: "${PORT:8087}"
   application:
     name: albedo
 
